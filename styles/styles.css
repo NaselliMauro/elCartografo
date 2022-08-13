@@ -66,6 +66,12 @@ ul{
 header ul a{
     color: #ccb690;
     font-weight: 600;
+    transition: color 0.5s;
+}
+
+header ul a:hover{ 
+    color: #C49440;
+;
 }
 
 a{
@@ -238,8 +244,15 @@ footer{
 
 .footer_redes img{
     padding: 10px;
-    max-width: 40px;
+    width: 40px;
+    height: 40px;
+    transition: all 1s;
     
+}
+
+.footer_redes:hover img{
+    width: 50px;
+    height: 50px;     
 }
 
 .footer_newsletter{
@@ -452,6 +465,11 @@ form{
 .map_type a{
     color: #ccb690;
     text-decoration: none;
+    transition: color 0.5s;
+}
+
+.map_type a:hover{ 
+    color: #C49440;
 }
 
 .map_type{
@@ -479,6 +497,11 @@ form{
     padding: 10px;
     background-color: white;
     border-radius: 25px;
+    transition: all 1s;
+}
+
+.mapa_img:hover img{
+    max-width: 95%;
 }
 
 .mapa_desc{

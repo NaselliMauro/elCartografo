@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,7 +86,10 @@
         </section>
 
         <section class="nosotros">
-            <div class="nosotros_texto">
+            <div class="nosotros_texto" 
+            data-aos="fade-right"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine">
                 <div class="nosotros_titulo">
                     <h2>Sobre Nosotros</h2>
                 </div>
@@ -98,7 +104,7 @@
             </div>
         </section>
 
-        <footer>
+        <footer >
             <div class="logo_footer">
                 <a href="index.html">
                     <img src="./images/icons8-rosa-de-los-vientos-40.png" alt="Logo de El Cartógrafo">
@@ -130,6 +136,9 @@
             </div>
         </footer> 
     </div>
-</body>
+    <script>
+        AOS.init();
+      </script>
+</body> 
 
 </html>

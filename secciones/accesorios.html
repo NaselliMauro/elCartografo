@@ -4,34 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body>
     <div class="envoltura_tienda">
-        <header class=encabezado>
-            <a href="../index.html">
-                <img class= nav_logo src="../images/icons8-rosa-de-los-vientos-80.png" alt="Logo de El Cartógrafo">
-            </a> 
-            <nav class="nav_header">
-                <ul class="nav_encabezado">
-                    <li class="nav_item">
-                        <a href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="mapas.html">Mapas</a>
-                    </li>
-                    <li class="nav_item">
-                            <a href="libreria.html">Libreria</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="accesorios.html">Accesorios</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="contacto.html">Contacto</a>                        </li>
-                    </ul>                 
-                </nav>
+        <header>
+            <nav class="navbar navbar-expand-md bg-light" style="background: linear-gradient(90deg, #2a4a8f 70%, rgba(30,57,116,1) 85%, rgba(19,42,93,1) 100%);>
+                <div class="container-fluid">
+                  <a class="navbar-brand ms-5" style="color: #ccb690;     font-weight: 600; font-size: 2rem;" href="../index.html">
+                    <img class= nav_logo src="../images/icons8-rosa-de-los-vientos-80.png" alt="Logo de El Cartógrafo">
+                    El Cartógrafo
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-center me-5" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item px-3">
+                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item px-3">
+                        <a class="nav-link" href="mapas.html">Mapas</a>
+                      </li>
+                      <li class="nav-item px-3">
+                        <a class="nav-link" href="libreria.html">Libreria</a>
+                      </li>
+                      <li class="nav-item px-3">
+                        <a class="nav-link" href="accesorios.html">Accesorios</a>
+                      </li>
+                      <li class="nav-item px-3">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
         </header>
 
         <main class="parallax_tienda">
@@ -152,5 +162,6 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

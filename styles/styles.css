@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -16,6 +17,7 @@ body{
 
 }
 
+
 .encabezado{
     grid-area: header;
     background: rgb(42,74,143);
@@ -30,6 +32,8 @@ body{
 
 ul{
     list-style-type: none;
+    padding: 0%;
+    margin: 0%;
 
 }
 
@@ -39,7 +43,7 @@ ul{
 }
 
 .nav_header{
-       display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -63,6 +67,21 @@ ul{
 
 }
 
+.nav-link{
+    color: #ccb690;
+    font-weight: 600;
+    transition: color 0.5s;
+}
+
+.nav-link:hover{ 
+    color: #C49440;
+}
+
+.navbar-toggler{
+    background-color: #ccb690;
+    border-color: #755e36;
+}
+
 header ul a{
     color: #ccb690;
     font-weight: 600;
@@ -71,7 +90,6 @@ header ul a{
 
 header ul a:hover{ 
     color: #C49440;
-;
 }
 
 a{
@@ -101,10 +119,14 @@ a{
     padding-top: 20px;
 }
 
+.titulo_parallax2{
+    font-size: 3rem;
+    padding-bottom:10px; 
+}
 .subtitulo_parallax{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 300;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .frase_parallax{
@@ -118,8 +140,11 @@ a{
 .titulo_index{
     grid-area: titulo;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
+}
+
+.titulo_index h3{
     font-size: 2rem;
 }
 
@@ -130,34 +155,59 @@ a{
     justify-content: center;
     justify-items: center;
     padding: 5px;
-    margin: 10px 0px 20px;
 
 }
 
 .producto{
-    padding: 10px;
-    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    margin: 10px;
 }
 
 .producto_img img{
-    max-width: 90%;
+    max-width: 300px;
     padding: 10px;
-    background-color: white;
-    border-radius: 25px;
 }
 
 .producto_desc{
-    font-size: 2rem;
-    padding: 20px 0px;
+    padding: 10px 0px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
+}
 
+.card{
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card-body{
+    padding: 10px 0px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-title{
+    font-size: 1.8rem;
+}
+
+.card-text{
+    font-size: 1.8rem;
+}
+
+
+
+.producto_desc p{
+    font-size: 1.8rem;
 }
 
 .nosotros{
@@ -188,9 +238,16 @@ a{
     
 }
 
+.nosotros_titulo h2{
+    font-size: 2rem;
+}
+
 .nosotros_p{
     padding: 10px;
-    font-size: 2rem;
+}
+
+.nosotros_p p{
+    font-size: 1.7rem
 }
 
 footer{
@@ -209,7 +266,8 @@ footer{
 
 .logo_footer{
     max-height: 40px;
-    position: relative
+    position: relative;
+    margin: 10px;
 }
 
 .footer_info{
@@ -225,12 +283,12 @@ footer{
     text-align: center;
 }
 
-.botones_footer h4{
-    font-size: 2rem;
+.botones_footer, .footer_newsletter h4{
+    font-size: 1.7rem;
 }
 
 .botones_footer p{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .footer_redes{
@@ -243,10 +301,10 @@ footer{
 }
 
 .footer_redes img{
-    padding: 10px;
     width: 40px;
     height: 40px;
     transition: all 1s;
+    margin: 10px;
     
 }
 
@@ -392,11 +450,16 @@ form{
     display: grid;
     grid-template-areas:
     "header"
+    "nav"
     "parallax"
     "titulo"
     "catalogo"
     "nosotros"
     "footer" ;
+}
+
+.navbar{
+    grid-area: nav;
 }
 
 .envoltura_tienda{
@@ -438,22 +501,22 @@ form{
         "map_t"
         "mapa_nav "
         "map_c";
-    grid-template-columns: 90%;
-    justify-content: center;
+    grid-template-columns: 100%;
+    justify-items: center;
 }
 
 .mapa_titulo{
     grid-area: map_t;
-    margin: 5px 0px 0px;
+    margin: 10px 0px 10px;
     padding: 10px;
     text-align: center;
+    font-size: 2rem;
 }
 
 .mapa_nav{
     grid-area: mapa_nav;
-    margin: 10px;
-    padding: 10px;
-    font-size: medium;
+    padding: 10px 30%;
+    font-size: 1.7rem;
     background-color: #2a4a8f;
     border-radius: 25px;
 }
@@ -490,18 +553,19 @@ form{
     margin: 10px;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    border-radius: 25px;
 }
 
 .mapa_img img{
-    max-width: 90%;
+    max-width: 300px;
     padding: 10px;
-    background-color: white;
-    border-radius: 25px;
+    margin: 10px;
     transition: all 1s;
 }
 
 .mapa_img:hover img{
-    max-width: 95%;
+    max-width: 350px;
 }
 
 .mapa_desc{
@@ -510,8 +574,22 @@ form{
     text-align: center;
 }
 
+@media (min-width:576px) and (max-width:768px){
 
-@media(min-width:768px){
+    .producto_img img{
+        max-width: 400px;
+    }
+    
+    .mapa_img img{
+        max-width: 400px;
+    }
+
+    .mapa_img:hover img{
+        max-width: 410px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
     .encabezado{
 
         flex-direction: row;
@@ -533,6 +611,7 @@ form{
         justify-content: center;
         align-items: center;
         width: 100%;
+        font-size: 2.3rem;
     }
 
     .nav_logo{
@@ -543,17 +622,7 @@ form{
     .nav_item{
         padding: 0px 20px;  
     }
-
-    .mainparallax {
-        padding: 100px;
-        height: 250px;
-    }
-    
-    .parallax{
-        color: #E8E1D0;
-    
-    }
-    
+      
     .titulo_parallax{
         font-size: 4rem;
     }
@@ -579,7 +648,7 @@ form{
 
     .grids_producto{
         display: grid;
-        grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 50% 50%;
         justify-content: space-evenly;
 
     }
@@ -634,11 +703,17 @@ form{
 
     .mapa_grid{
         grid-template-areas: 
-        "map_t map_t map_t map_t"
-        "mapa_nav map_c map_c map_c"
-        "mapa_nav map_c map_c map_c";
-        grid-template-columns: auto 27% 27% 27%;
+        "map_t map_t map_t"
+        "mapa_nav map_c map_c"
+        "mapa_nav map_c map_c";
+        grid-template-columns: auto 40% 40%;
         grid-template-rows: 50px 1fr 1fr;
+        align-items: start;
+    }
+
+    .mapa_nav {
+        margin: 10px;
+        padding: 10px;
     }
 
     .grid_consulta{
@@ -656,8 +731,146 @@ form{
 
 }
 
-@media(min-width:1024px){
+@media (min-width: 1200px){
+    
+    .encabezado{
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+    }
+
+    .nav_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    
+    }
+    .nav_encabezado{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav_logo{
+        height: 80px;
+        width: 80px;
+    }
+
+    .nav_item{
+        padding: 0px 20px;  
+    }
+
+    .titulo_parallax{
+        font-size: 4rem;
+    }
+    
+    .subtitulo_parallax{
+        font-size: 3rem;
+    }
+    
+    .frase_parallax{
+        font-weight: 400;
+        padding: 30px 20px 20px;
+    }
+    
+    .autor_frase_parallax{
+        font-style: normal;
+    }
+    
+    .titulo_index{
+        padding: 30px 30px 0px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .grids_producto{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+
+    }
+
+    .producto{
+        padding: 30px;
+
+    }
+    
+    .producto_img img{
+        max-width: 400px;
+        max-height: 500px;
+
+    }
+    
+    .producto_desc{
+        font-size: medium;
+    }
+
+    .nosotros_texto{
+        font-size: 2rem;
+        margin: 10px 50% 10px 10px;
+    }
+
+    footer{
+        flex-direction: row;
+        
+    }
+        
+    .footer_info{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0px 15px;
+        margin-right: 40px;
+    }
+    
+    .botones_footer{
+        padding: 0px 30px;
+        width: 30%;
+        text-align: center;
+    }
+    
+    .botones_footer p{
+        font-size: small;
+    }
+
+    .footer_email input{
+        height: 25px;
+        width: 200px;
+        text-align: center;
+    }
+
+    .mapa_grid{
+        display: grid;
+        grid-template-areas: 
+        "map_t map_t map_t map_t"
+        "mapa_nav map_c map_c map_c"
+        "mapa_nav map_c map_c map_c";
+        grid-template-columns: auto 27% 27% 27%;
+        grid-template-rows: 50px 1fr 1fr;
+        align-items: start;
+        justify-content: center;
+        justify-items: center;
+    }
+
     .mapa_catalogo{
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .mapa_nav {
+        margin: 20px;
+    }
+
+    .grid_consulta{
+        grid-template-areas: 
+        "form ubic"
+        "form ubic"
+        ;
+        grid-template-columns: 35% 55%;
+
+    }
+
 }

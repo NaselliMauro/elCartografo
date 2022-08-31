@@ -1,4 +1,13 @@
 $azuldef:#2a4a8f;
 $browndef:#ccb690;
 $brownhover: #C49440;
-$paddingdef: 10px;
+$boxdef: 10px;
+
+.hoverExtend{
+    color: $brownhover;
+}
+
+@mixin sizes ($width, $height) {
+    height: $height;
+    width: $width;
+}

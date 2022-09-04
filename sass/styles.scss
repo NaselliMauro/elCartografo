@@ -16,7 +16,7 @@
 }
 
 .nav_logo{
-    @include sizes (40px, 40px);
+    @include sizes (60px, 60px);
     
 }
 
@@ -48,6 +48,7 @@
 .nav-link{
     color: $browndef;
     font-weight: 600;
+    font-size: 2.4rem;
     transition: color 0.5s;
 }
 
@@ -55,10 +56,45 @@
     @extend .hoverExtend
 }
 
-.navbar-toggler{
-    background-color: $browndef;
-    border-color: #755e36;
+
+.nav-search{ 
+
+    display: flex;
+
+    .btn{
+        background-color: $browndef;
+        border-color: #755e36;
+        font-size: 1.5rem;
+        font-weight: 500;
+    } 
+    
+    .form-control{
+        font-size: 1.5rem;
+    }
 }
+
+.navbar-brand-mobile{
+    align-items: center;
+    justify-content: center;
+}
+
+
+.link-blue{
+    color: $azuldef;
+}
+
+.navbar-toggler{
+    margin: $boxdef;
+    align-items: center;
+    border: none;
+    transition: all 1s;
+}
+
+.navbar-toggler:hover{
+    transform: rotate(90deg);
+    display: inline-block
+}
+
 
 header ul a{
     color: $browndef;
@@ -87,49 +123,74 @@ a{
 
 }
 
+.mainparallax{
+    height: 500px;
+}
+
 .parallax{
     color: #E8E1D0;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
 
 }
 
-.titulo_parallax{
+.parallax_tienda_titulo{
+    color: #E8E1D0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1{
+        font-size: 4rem
+    }
+}
+
+.parallax_titulo{
+    font-size: 4rem;
+    padding-top: $boxdef*4;
+}
+
+.parallax_titulo2{
+    font-size: 4rem;
+    padding-bottom: $boxdef*4; 
+}
+.parallax_subtitulo{
     font-size: 3rem;
-    padding-top: $boxdef*2;
-}
-
-.titulo_parallax2{
-    font-size: 3rem;
-    padding-bottom: $boxdef; 
-}
-.subtitulo_parallax{
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-weight: 400;
     padding-bottom: $boxdef;
+    font-style: italic;
 }
 
-.frase_parallax{
+.parallax_frase{
+    font-size: 1.8rem;
+    text-align: right; 
+    padding: 30px 20px 20px;
+}
+
+.parallax_frase_autor{
     font-size: 1.8rem;
     font-style: italic;
     text-align: right;
-    
-    padding: 30px 20px 20px;
-}
+ }
 
 .titulo_index{
     grid-area: titulo;
     padding: $boxdef;
     margin-top: $boxdef*2;
     text-align: center;
-}
 
-.titulo_index h3{
-    font-size: 2rem;
-}
+    h2{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+} 
 
 .grids_producto{
     grid-area: catalogo;
     display: grid;
-    grid-template-columns: 90%;
+    grid-template-columns: 350px;
     justify-content: center;
     justify-items: center;
     padding: 5px;
@@ -164,6 +225,11 @@ a{
     border-radius: 25px;
     margin: $boxdef;
     padding: $boxdef;
+
+    img{
+        max-width: 300px;
+        padding: $boxdef;
+    }
 }
 
 .card-body{
@@ -172,14 +238,23 @@ a{
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
+.bi-cart-plus{
+    color: black;
+    text-decoration: none;
+    margin: $boxdef;
+}
+
+
 .card-title{
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .card-text{
-    font-size: 1.8rem;
+    font-size: 1.90rem;
+    font-weight: bold;
 }
 
 .producto_desc p{
@@ -205,9 +280,21 @@ a{
     border-top-style: outset;
     border-left-style: outset;
     border-color:   #755e36;
-    font-size: 1rem;
 }
 
+.nosotros_titulo{
+    h3{   
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+}
+
+.nosotros_p{
+    p{ 
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
 
 
 footer{
@@ -220,6 +307,7 @@ footer{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
     font-size: medium;
     
 }
@@ -236,19 +324,29 @@ footer{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    
+
 }
 
-.botones_footer, .footer_redes, .footer_newsletter{
+.footer_contacto, .footer_redes, .footer_newsletter{
     padding: 10px 30px;
     text-align: center;
 }
 
-.botones_footer, .footer_newsletter h4{
-    font-size: 1.7rem;
+.footer_contacto, .footer_newsletter{
+    
+    h4{
+    font-size: 2rem;
+    font-weight: 500;
+    }
 }
 
-.botones_footer p{
+.footer_contacto{
+    
+    p{
     font-size: 1.5rem;
+    font-weight: 500;
+    }
 }
 
 .footer_redes{
@@ -302,7 +400,7 @@ form{
 }
 
 .formulario_nombre input{
-    @include sizes (200px, 30px)
+    @include sizes (300px, 30px)
 }
 
 .formulario_email{
@@ -310,7 +408,7 @@ form{
 }
 
 .formulario_email input{
-    @include sizes (200px, 30px)
+    @include sizes (300px, 30px)
 }
 
 .formulario_motivo{
@@ -318,7 +416,7 @@ form{
 }
 
 .formulario_motivo select{
-    @include sizes (200px, 30px)
+    @include sizes (300px, 30px)
 }
 
 .formulario_consulta{
@@ -332,10 +430,10 @@ form{
     flex-direction: row;
     justify-content: center;
 
-}
+    input{
+        margin-left: $boxdef*2;
+    }
 
-.formulario_noticias input{
-    margin-left: $boxdef*2;
 }
 
 .botones{
@@ -346,19 +444,19 @@ form{
 }
 
 .boton_enviar{
-    margin: 0% 15px
-}
+    margin: 0% 15px;
 
-.boton_enviar input{
-    @include sizes (100px, 50px)
+    input{
+        @include sizes (100px, 50px)
+    }
 }
 
 .boton_reset{
-    margin: 0% 15px
-}
+    margin: 0% 15px;
 
-.boton_reset input{
-    @include sizes (100px, 50px)
+    input{
+        @include sizes (100px, 50px)
+    }
 }
 
 .ubicacion{
@@ -458,19 +556,22 @@ form{
         "map_c";
     grid-template-columns: 100%;
     justify-items: center;
+    margin-bottom: $boxdef*4;
 }
 
 .mapa_titulo{
     grid-area: map_t;
-    margin: 10px 0px 10px;
+    margin: $boxdef*2 0px;
     padding: $boxdef;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+
 }
 
 .mapa_nav{
     grid-area: mapa_nav;
-    padding: 10px 30%;
+    padding: 10px 20%;
     font-size: 1.7rem;
     background-color: $azuldef;
     border-radius: 25px;
@@ -480,33 +581,38 @@ form{
     text-align: center;
 }
 
-.map_type a{
-    color: $browndef;
-    text-decoration: none;
-    transition: color 0.5s;
+
+
+.map_type{
+    padding: $boxdef/2;
+    margin: $boxdef/2;
+    font-size: 2rem;
+    font-weight: 600;
+
+    a{
+        color: $browndef;
+        text-decoration: none;
+        transition: color 0.5s;
+    }
 }
 
 .map_type a:hover{ 
     @extend .hoverExtend
 }
 
-.map_type{
-    padding: $boxdef/2;
-    margin: $boxdef/2;
-}
-
 .mapa_catalogo{
     grid-area: map_c;
-    margin: $boxdef;
     display: grid;
     grid-template-columns: 1fr;
+    margin: $boxdef*4
+    ;
 }
 
 .mapa_producto{
     display: flex;
     flex-direction: column;
     margin: $boxdef;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background-color: white;
     border-radius: 25px;
@@ -516,35 +622,32 @@ form{
     max-width: 300px;
     padding: $boxdef;
     margin: $boxdef;
-    transition: all 1s;
-}
-
-.mapa_img:hover img{
-    max-width: 320px;
 }
 
 .mapa_desc{
     max-width: 300px;
-    font-size: medium;
+    font-size: 2rem;
     text-align: center;
 }
 
 @media (max-width:768px) and (min-width:576px){
 
     .producto_img img{
-        max-width: 250px;
+        max-width: 350px;
     }
     
     .mapa_img img{
-        max-width: 250px;
+        max-width: 350px;
     }
 
-    .mapa_img:hover img{
-        max-width: 255px;
-    }
 }
 
 @media (max-width: 1199px) and (min-width: 768px){
+    
+    .mapa_catalogo{
+        margin: 0px;
+    }
+    
     .encabezado{
 
         flex-direction: row;
@@ -602,8 +705,8 @@ form{
 
     .grids_producto{
         display: grid;
-        grid-template-columns: 50% 50%;
-        justify-content: space-evenly;
+        grid-template-columns: auto auto;
+        justify-content: center;
 
     }
 
@@ -639,13 +742,13 @@ form{
         margin-right: 40px;
     }
     
-    .botones_footer{
+    .footer_contacto{
         padding: 0px 30px;
         width: 30%;
         text-align: center;
     }
     
-    .botones_footer p{
+    .footer_contacto p{
         font-size: small;
     }
 
@@ -661,7 +764,7 @@ form{
         "mapa_nav map_c map_c"
         "mapa_nav map_c map_c";
         grid-template-columns: auto 40% 40%;
-        grid-template-rows: 50px 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr;
         align-items: start;
     }
 
@@ -688,10 +791,8 @@ form{
 @media (min-width: 1200px){
     
     .encabezado{
-
         flex-direction: row;
         flex-wrap: nowrap;
-        
     }
 
     .nav_header{
@@ -702,6 +803,7 @@ form{
         width: 90%;
     
     }
+    
     .nav_encabezado{
         display: flex;
         flex-direction: row;
@@ -741,10 +843,16 @@ form{
         text-align: center;
     }
 
+    .card{
+        img{
+            max-width: 400px;
+        }
+    }
+
     .grids_producto{
         display: grid;
         grid-template-columns: auto auto auto;
-        justify-content: space-evenly;
+        justify-content: center;
 
     }
 
@@ -780,13 +888,13 @@ form{
         margin-right: $boxdef*4;
     }
     
-    .botones_footer{
+    .footer_contacto{
         padding: 0px 30px;
         width: 30%;
         text-align: center;
     }
     
-    .botones_footer p{
+    .footer_contacto p{
         font-size: small;
     }
 
@@ -803,7 +911,7 @@ form{
         "mapa_nav map_c map_c map_c"
         "mapa_nav map_c map_c map_c";
         grid-template-columns: auto 27% 27% 27%;
-        grid-template-rows: 50px 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr;
         align-items: start;
         justify-content: center;
         justify-items: center;
@@ -811,10 +919,10 @@ form{
 
     .mapa_catalogo{
         grid-template-columns: 1fr 1fr 1fr;
+        margin: 0px;
     }
-
     .mapa_nav {
-        margin: $boxdef*2;
+        margin: 20px 10px
     }
 
     .grid_consulta{
@@ -823,7 +931,5 @@ form{
         "form ubic"
         ;
         grid-template-columns: 35% 55%;
-
     }
-
 }

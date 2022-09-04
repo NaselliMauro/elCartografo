@@ -52,8 +52,8 @@ ul {
 }
 
 .nav_logo {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
 }
 
 .nav_header {
@@ -81,12 +81,42 @@ ul {
 .nav-link {
   color: #ccb690;
   font-weight: 600;
+  font-size: 2.4rem;
   transition: color 0.5s;
 }
 
-.navbar-toggler {
+.nav-search {
+  display: flex;
+}
+.nav-search .btn {
   background-color: #ccb690;
   border-color: #755e36;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.nav-search .form-control {
+  font-size: 1.5rem;
+}
+
+.navbar-brand-mobile {
+  align-items: center;
+  justify-content: center;
+}
+
+.link-blue {
+  color: #2a4a8f;
+}
+
+.navbar-toggler {
+  margin: 10px;
+  align-items: center;
+  border: none;
+  transition: all 1s;
+}
+
+.navbar-toggler:hover {
+  transform: rotate(90deg);
+  display: inline-block;
 }
 
 header ul a {
@@ -110,31 +140,55 @@ a {
   color: #142938;
 }
 
+.mainparallax {
+  height: 500px;
+}
+
 .parallax {
   color: #E8E1D0;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
 }
 
-.titulo_parallax {
+.parallax_tienda_titulo {
+  color: #E8E1D0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.parallax_tienda_titulo h1 {
+  font-size: 4rem;
+}
+
+.parallax_titulo {
+  font-size: 4rem;
+  padding-top: 40px;
+}
+
+.parallax_titulo2 {
+  font-size: 4rem;
+  padding-bottom: 40px;
+}
+
+.parallax_subtitulo {
   font-size: 3rem;
-  padding-top: 20px;
-}
-
-.titulo_parallax2 {
-  font-size: 3rem;
+  font-weight: 400;
   padding-bottom: 10px;
+  font-style: italic;
 }
 
-.subtitulo_parallax {
-  font-size: 2.5rem;
-  font-weight: 300;
-  padding-bottom: 10px;
+.parallax_frase {
+  font-size: 1.8rem;
+  text-align: right;
+  padding: 30px 20px 20px;
 }
 
-.frase_parallax {
+.parallax_frase_autor {
   font-size: 1.8rem;
   font-style: italic;
   text-align: right;
-  padding: 30px 20px 20px;
 }
 
 .titulo_index {
@@ -143,15 +197,15 @@ a {
   margin-top: 20px;
   text-align: center;
 }
-
-.titulo_index h3 {
-  font-size: 2rem;
+.titulo_index h2 {
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .grids_producto {
   grid-area: catalogo;
   display: grid;
-  grid-template-columns: 90%;
+  grid-template-columns: 350px;
   justify-content: center;
   justify-items: center;
   padding: 5px;
@@ -186,6 +240,10 @@ a {
   margin: 10px;
   padding: 10px;
 }
+.card img {
+  max-width: 300px;
+  padding: 10px;
+}
 
 .card-body {
   padding: 10px 0px;
@@ -193,14 +251,22 @@ a {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
+}
+
+.bi-cart-plus {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
 }
 
 .card-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .card-text {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
+  font-weight: bold;
 }
 
 .producto_desc p {
@@ -226,7 +292,16 @@ a {
   border-top-style: outset;
   border-left-style: outset;
   border-color: #755e36;
-  font-size: 1rem;
+}
+
+.nosotros_titulo h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.nosotros_p p {
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 footer {
@@ -239,6 +314,7 @@ footer {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  justify-content: center;
   font-size: medium;
 }
 
@@ -256,17 +332,19 @@ footer {
   align-items: center;
 }
 
-.botones_footer, .footer_redes, .footer_newsletter {
+.footer_contacto, .footer_redes, .footer_newsletter {
   padding: 10px 30px;
   text-align: center;
 }
 
-.botones_footer, .footer_newsletter h4 {
-  font-size: 1.7rem;
+.footer_contacto h4, .footer_newsletter h4 {
+  font-size: 2rem;
+  font-weight: 500;
 }
 
-.botones_footer p {
+.footer_contacto p {
   font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .footer_redes {
@@ -320,7 +398,7 @@ form {
 
 .formulario_nombre input {
   height: 30px;
-  width: 200px;
+  width: 300px;
 }
 
 .formulario_email {
@@ -329,7 +407,7 @@ form {
 
 .formulario_email input {
   height: 30px;
-  width: 200px;
+  width: 300px;
 }
 
 .formulario_motivo {
@@ -338,7 +416,7 @@ form {
 
 .formulario_motivo select {
   height: 30px;
-  width: 200px;
+  width: 300px;
 }
 
 .formulario_consulta {
@@ -352,7 +430,6 @@ form {
   flex-direction: row;
   justify-content: center;
 }
-
 .formulario_noticias input {
   margin-left: 20px;
 }
@@ -367,7 +444,6 @@ form {
 .boton_enviar {
   margin: 0% 15px;
 }
-
 .boton_enviar input {
   height: 50px;
   width: 100px;
@@ -376,7 +452,6 @@ form {
 .boton_reset {
   margin: 0% 15px;
 }
-
 .boton_reset input {
   height: 50px;
   width: 100px;
@@ -454,19 +529,21 @@ form {
   grid-template-areas: "map_t" "mapa_nav " "map_c";
   grid-template-columns: 100%;
   justify-items: center;
+  margin-bottom: 40px;
 }
 
 .mapa_titulo {
   grid-area: map_t;
-  margin: 10px 0px 10px;
+  margin: 20px 0px;
   padding: 10px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .mapa_nav {
   grid-area: mapa_nav;
-  padding: 10px 30%;
+  padding: 10px 20%;
   font-size: 1.7rem;
   background-color: #2a4a8f;
   border-radius: 25px;
@@ -476,29 +553,30 @@ form {
   text-align: center;
 }
 
+.map_type {
+  padding: 5px;
+  margin: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+}
 .map_type a {
   color: #ccb690;
   text-decoration: none;
   transition: color 0.5s;
 }
 
-.map_type {
-  padding: 5px;
-  margin: 5px;
-}
-
 .mapa_catalogo {
   grid-area: map_c;
-  margin: 10px;
   display: grid;
   grid-template-columns: 1fr;
+  margin: 40px;
 }
 
 .mapa_producto {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-color: white;
   border-radius: 25px;
@@ -508,31 +586,26 @@ form {
   max-width: 300px;
   padding: 10px;
   margin: 10px;
-  transition: all 1s;
-}
-
-.mapa_img:hover img {
-  max-width: 320px;
 }
 
 .mapa_desc {
   max-width: 300px;
-  font-size: medium;
+  font-size: 2rem;
   text-align: center;
 }
 
 @media (max-width: 768px) and (min-width: 576px) {
   .producto_img img {
-    max-width: 250px;
+    max-width: 350px;
   }
   .mapa_img img {
-    max-width: 250px;
-  }
-  .mapa_img:hover img {
-    max-width: 255px;
+    max-width: 350px;
   }
 }
 @media (max-width: 1199px) and (min-width: 768px) {
+  .mapa_catalogo {
+    margin: 0px;
+  }
   .encabezado {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -579,8 +652,8 @@ form {
   }
   .grids_producto {
     display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: space-evenly;
+    grid-template-columns: auto auto;
+    justify-content: center;
   }
   .producto {
     padding: 30px;
@@ -605,12 +678,12 @@ form {
     padding: 0px 15px;
     margin-right: 40px;
   }
-  .botones_footer {
+  .footer_contacto {
     padding: 0px 30px;
     width: 30%;
     text-align: center;
   }
-  .botones_footer p {
+  .footer_contacto p {
     font-size: small;
   }
   .footer_email input {
@@ -621,7 +694,7 @@ form {
   .mapa_grid {
     grid-template-areas: "map_t map_t map_t" "mapa_nav map_c map_c" "mapa_nav map_c map_c";
     grid-template-columns: auto 40% 40%;
-    grid-template-rows: 50px 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
     align-items: start;
   }
   .mapa_nav {
@@ -680,10 +753,13 @@ form {
     margin-top: 10px;
     text-align: center;
   }
+  .card img {
+    max-width: 400px;
+  }
   .grids_producto {
     display: grid;
     grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   .producto {
     padding: 30px;
@@ -708,12 +784,12 @@ form {
     padding: 0px 15px;
     margin-right: 40px;
   }
-  .botones_footer {
+  .footer_contacto {
     padding: 0px 30px;
     width: 30%;
     text-align: center;
   }
-  .botones_footer p {
+  .footer_contacto p {
     font-size: small;
   }
   .footer_email input {
@@ -725,16 +801,17 @@ form {
     display: grid;
     grid-template-areas: "map_t map_t map_t map_t" "mapa_nav map_c map_c map_c" "mapa_nav map_c map_c map_c";
     grid-template-columns: auto 27% 27% 27%;
-    grid-template-rows: 50px 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
     align-items: start;
     justify-content: center;
     justify-items: center;
   }
   .mapa_catalogo {
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 0px;
   }
   .mapa_nav {
-    margin: 20px;
+    margin: 20px 10px;
   }
   .grid_consulta {
     grid-template-areas: "form ubic" "form ubic";

@@ -12,134 +12,183 @@
 <body>
     <div class="envoltura_tienda">
         <header>
-            <nav class="navbar navbar-expand-md bg-light" style="background: linear-gradient(90deg, #2a4a8f 70%, rgba(30,57,116,1) 85%, rgba(19,42,93,1) 100%);>
-                <div class="container-fluid">
-                  <a class="navbar-brand ms-5" style="color: #ccb690;     font-weight: 600; font-size: 2rem;" href="../index.html">
-                    <img class= nav_logo src="../images/icons8-rosa-de-los-vientos-80.png" alt="Logo de El Cartógrafo">
-                    El Cartógrafo
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-center me-5" id="navbarNav">
-                    <ul class="navbar-nav">
-                      <li class="nav-item px-3">
-                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                      </li>
-                      <li class="nav-item px-3">
-                        <a class="nav-link" href="mapas.html">Mapas</a>
-                      </li>
-                      <li class="nav-item px-3">
-                        <a class="nav-link" href="libreria.html">Libreria</a>
-                      </li>
-                      <li class="nav-item px-3">
-                        <a class="nav-link" href="accesorios.html">Accesorios</a>
-                      </li>
-                      <li class="nav-item px-3">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                      </li>
-                    </ul>
-                  </div>
+            <nav class="navbar navbar-expand-md bg-light"
+                style="background: linear-gradient(90deg, #2a4a8f 70%, rgba(30,57,116,1) 85%, rgba(19,42,93,1) 100%)" ;>
+                <div class=" container-fluid justify-content-center">
+                    <a class="navbar-brand navbar-brand-mobile d-none d-md-block d-xl-none ms-5 me-5" href="../index.html">
+                        <img class=nav_logo src="../images/icons8-rosa-de-los-vientos-80.png"
+                            alt="Logo de El Cartógrafo">
+                    </a>
+                    <a class="navbar-brand d-none d-xl-block ms-5 me-5"
+                        style="color: #ccb690;     font-weight: 600; font-size: 2rem;" href="../index.html">
+                        <img class=nav_logo src="../images/icons8-rosa-de-los-vientos-80.png"
+                            alt="Logo de El Cartógrafo">
+                        El Cartógrafo
+                    </a>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span>
+                            <img class=nav_logo src="..//images/icons8-rosa-de-los-vientos-80.png"
+                            alt="Logo de El Cartógrafo">
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item px-3">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="mapas.html">Mapas</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="libreria.html">Libreria</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="accesorios.html">Accesorios</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                        <form class="nav-search d-md-flex d-lg-none " role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-success link-blue " type="submit">Buscar</button>
+                        </form>
+                    </div>
+                    <form class="nav-search d-none d-lg-flex " role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success link-blue " type="submit">Buscar</button>
+                    </form>
                 </div>
-              </nav>
+            </nav>
         </header>
 
         <main class="parallax_tienda">
-            <div class="parallax">
-                <h1 class="titulo_parallax">Accesorios</h1>
+            <div class="parallax_tienda_titulo">
+                <h1>Accesorios</h1>
             </div>
         </main>
 
         <section class="mapa_grid">
-            <h3 class="mapa_titulo">
-                Nuestos accesorios más populares
-            </h3>
+            <h2 class="mapa_titulo">
+                Nuestros accesorios más populares
+            </h2>
             
             <nav class="mapa_nav">
                 <ul class="mapa_nav_flex">
+
                     <li class="map_type">
-                        <a href="mapas.html">Mapas Históricos</a>
+                        <a href="accesorios.html">Populares</a>
                     </li>
                     <li class="map_type">
-                        <a href="mapas.html">Mapas Infográficos</a>
-                    </li>
+                        <a href="soportes.html">Soportes</a>
+                    </li>  
                     <li class="map_type">
-                        <a href="mapas.html">Mapas Urbanos</a>
-                    </li>
-                    <li class="map_type">
-                        <a href="mapas.html">Mapas Temáticos</a>
+                        <a href="otrosAccesorios.html">Otros</a>
                     </li>
                 </ul>
             </nav>
-            <div class="mapa_catalogo">            
+            <sec class="mapa_catalogo">            
                 <div class="mapa_producto">
                     <div class="mapa_img"> 
-                        <img src="../images/Mapa indepedencias americanas.jpg" alt="Mapa de Independencias Americanas">
+                        <img src="../images/Globo terráqueo.jpg" alt="Mapa de Independencias Americanas">
                     </div>
                     <div class="mapa_desc">
-                        <p>Mapa de Independencias Americanas</p>
-                        <p>$2500</p>
+                        <p>Globo Terráqueo Clásico</p>
+                        <p>$1500</p>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-cart-plus" viewBox="0 0 16 16">
+                            <path
+                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="mapa_producto">
                     <div class="mapa_img"> 
-                        <img src="../images/Mapa indepedencias americanas.jpg" alt="Mapa de Independencias Americanas">
+                        <img src="../images/Llavero 1.jpg" alt="Mapa de Independencias Americanas">
                     </div>
                     <div class="mapa_desc">
-                        <p>Mapa de Independencias Americanas</p>
-                        <p>$2500</p>
+                        <p>Llavero brújula</p>
+                        <p>$500</p>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-cart-plus" viewBox="0 0 16 16">
+                            <path
+                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="mapa_producto">
                     <div class="mapa_img"> 
-                        <img src="../images/Mapa indepedencias americanas.jpg" alt="Mapa de Independencias Americanas">
+                        <img src="../images/Rodillo soporte.jpg" alt="Mapa de Independencias Americanas">
                     </div>
                     <div class="mapa_desc">
-                        <p>Mapa de Independencias Americanas</p>
+                        <p>Soporte de pared rodillo</p>
                         <p>$2500</p>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-cart-plus" viewBox="0 0 16 16">
+                            <path
+                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="mapa_producto">
                     <div class="mapa_img"> 
-                        <img src="../images/Mapa indepedencias americanas.jpg" alt="Mapa de Independencias Americanas">
+                        <img src="../images/tripode.png" alt="Mapa de Independencias Americanas">
                     </div>
                     <div class="mapa_desc">
-                        <p>Mapa de Independencias Americanas</p>
-                        <p>$2500</p>
-                    </div>
-                </div>
+                        <p>Soporte Trípode</p>
+                        <p>$4000</p>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-cart-plus" viewBox="0 0 16 16">
+                            <path
+                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                        </a>
+                    </div>   
+                </div>        
                 <div class="mapa_producto">
                     <div class="mapa_img"> 
-                        <img src="../images/Mapa indepedencias americanas.jpg" alt="Mapa de Independencias Americanas">
+                        <img src="../images/taza.jpg" alt="Mapa de Independencias Americanas">
                     </div>
                     <div class="mapa_desc">
-                        <p>Mapa de Independencias Americanas</p>
-                        <p>$2500</p>
+                        <p>Tazas temáticas</p>
+                        <p>$650</p>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-cart-plus" viewBox="0 0 16 16">
+                            <path
+                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                        </a>
                     </div>
-                </div>
-                <div class="mapa_producto">
-                    <div class="mapa_img"> 
-                        <img src="../images/Mapa indepedencias americanas.jpg" alt="Mapa de Independencias Americanas">
-                    </div>
-                    <div class="mapa_desc">
-                        <p>Mapa de Independencias Americanas</p>
-                        <p>$2500</p>
-                    </div>
-                </div>
-                
+                </div>      
             </div>
         </section>
 
         <footer>
             <div class="logo_footer">
-                <a href="../index.html">
+                <a href="accesorios.html">
                     <img src="../images/icons8-rosa-de-los-vientos-40.png" alt="Logo de El Cartógrafo">
                 </a>
             </div>
             <div class="footer_info">
-                <div class=botones_footer>
+                <div class=footer_contacto>
                     <h4>Información de Contacto</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, maxime. At ipsam, reprehenderit, delectus, similique quo voluptate eligendi earum nostrum quas magni accusantium eos beatae in ad nisi dolores. Corporis.</p>
+                    <p>Mitre 7920 Esteban Adrogué</p>
+                    <p>(011) 2198-31234</p>
+                    <p>info@elcartografo.com</p>
                 </div>
                 <div class=footer_redes>
                     <a href="https://www.facebook.com">
@@ -159,7 +208,7 @@
                             <input type="email" placeholder="Tu email" name="email"><br>
                         </label>
                     </div>
-            </div>
+                </div>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

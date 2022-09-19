@@ -180,6 +180,7 @@ a{
     padding: $boxdef;
     margin-top: $boxdef*2;
     text-align: center;
+    color: #3a2d11;
 
     h2{
         font-size: 3rem;
@@ -261,6 +262,22 @@ a{
     font-size: 1.8rem;
 }
 
+.card_p {
+    
+    color: #3a2d11;
+    font-weight: 600;
+    font-size: 2.4rem;
+    transition: color 0.5s;
+    text-align: center;
+
+    
+}
+
+.card_p:hover{ 
+    color: $brownhover
+    ;
+}
+
 .nosotros{
     grid-area: nosotros;
     background:linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.514)), url(https://i.imgur.com/VTTDvs1.jpg);
@@ -273,7 +290,7 @@ a{
 .nosotros_texto{
     background-color: rgba(255,255,255, 0.7);
     background-position: center;
-    text-align: left;
+    text-align: center;
     padding: $boxdef*2;
     margin: $boxdef;
     border-radius: $boxdef*4;
@@ -356,14 +373,13 @@ footer{
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
-}
-
-.footer_redes img{
-    width: 40px;
-    height: 40px;
-    transition: all 1s;
-    margin: $boxdef;
     
+    img{
+        width: 40px;
+        height: 40px;
+        transition: all 1s;
+        margin: $boxdef;
+    }
 }
 
 .footer_redes:hover img{
@@ -561,12 +577,12 @@ form{
 
 .mapa_titulo{
     grid-area: map_t;
-    margin: $boxdef*2 0px;
+    margin: $boxdef*2 10px 0px;
     padding: $boxdef;
     text-align: center;
     font-size: 3rem;
-    font-weight: 600;
-
+    font-weight: 700;
+    color: #3a2d11;
 }
 
 .mapa_nav{
@@ -575,6 +591,7 @@ form{
     font-size: 1.7rem;
     background-color: $azuldef;
     border-radius: 25px;
+    margin: 10px 10px;
 }
 
 .mapa_nav ul{
@@ -604,28 +621,27 @@ form{
     grid-area: map_c;
     display: grid;
     grid-template-columns: 1fr;
-    margin: $boxdef*4
-    ;
+    margin: $boxdef;
 }
 
 .mapa_producto{
     display: flex;
     flex-direction: column;
     margin: $boxdef;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
     border-radius: 25px;
 }
 
 .mapa_img img{
-    max-width: 300px;
+    max-width: 225px;
     padding: $boxdef;
     margin: $boxdef;
 }
 
 .mapa_desc{
-    max-width: 300px;
+    max-width: 225px;
     font-size: 2rem;
     text-align: center;
 }
@@ -644,6 +660,14 @@ form{
 
 @media (max-width: 1199px) and (min-width: 768px){
     
+    .card{
+        img{
+            max-width: 400px;
+            width: 400px;
+            height: 350px;
+        }
+    }
+
     .mapa_catalogo{
         margin: 0px;
     }
@@ -715,19 +739,20 @@ form{
 
     }
     
-    .producto_img img{
+   
+    .mapa_img img{
         max-width: 300px;
         max-height: 400px;
 
     }
     
-    .producto_desc{
+    .mapa_desc{
         font-size: medium;
     }
 
     .nosotros_texto{
         font-size: 2rem;
-        margin: 10px 50% 10px 10px;
+        margin: 1% 15%;
     }
 
     footer{
@@ -770,7 +795,7 @@ form{
 
     .mapa_nav {
         margin: $boxdef;
-        padding: $boxdef;
+        padding: 10%;
     }
 
     .grid_consulta{
@@ -846,6 +871,8 @@ form{
     .card{
         img{
             max-width: 400px;
+            width: 400px;
+            height: 400px;
         }
     }
 
@@ -873,7 +900,7 @@ form{
 
     .nosotros_texto{
         font-size: 2rem;
-        margin: 10px 50% 10px 10px;
+        margin: 1% 15%;
     }
 
     footer{
@@ -910,7 +937,7 @@ form{
         "map_t map_t map_t map_t"
         "mapa_nav map_c map_c map_c"
         "mapa_nav map_c map_c map_c";
-        grid-template-columns: auto 27% 27% 27%;
+        grid-template-columns: 20% 25% 25% 25%;
         grid-template-rows: 100px 1fr 1fr;
         align-items: start;
         justify-content: center;
@@ -921,8 +948,9 @@ form{
         grid-template-columns: 1fr 1fr 1fr;
         margin: 0px;
     }
+
     .mapa_nav {
-        margin: 20px 10px
+        padding: 20%;
     }
 
     .grid_consulta{
@@ -932,4 +960,25 @@ form{
         ;
         grid-template-columns: 35% 55%;
     }
+}
+
+.envolturaTest{
+    display: grid;
+    grid-template-areas:
+    "navTest"
+    "parallaxTienda"
+    "catalogoTest"
+    "footer" ;
+}
+
+.nav_test{
+    grid-area: navTest;
+}
+
+.catalogo_grid{
+    grid-area: catalogoTest;
+}
+
+.titulo_test{
+    margin: 10px;
 }

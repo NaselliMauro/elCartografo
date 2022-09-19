@@ -13,6 +13,8 @@ html {
 body {
   background-color: #E8E1D0;
   font-size: 2rem;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 ul {
@@ -196,6 +198,7 @@ a {
   padding: 10px;
   margin-top: 20px;
   text-align: center;
+  color: #3a2d11;
 }
 .titulo_index h2 {
   font-size: 3rem;
@@ -273,6 +276,18 @@ a {
   font-size: 1.8rem;
 }
 
+.card_p {
+  color: #3a2d11;
+  font-weight: 600;
+  font-size: 2.4rem;
+  transition: color 0.5s;
+  text-align: center;
+}
+
+.card_p:hover {
+  color: #C49440;
+}
+
 .nosotros {
   grid-area: nosotros;
   background: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.514)), url(https://i.imgur.com/VTTDvs1.jpg);
@@ -285,7 +300,7 @@ a {
 .nosotros_texto {
   background-color: rgba(255, 255, 255, 0.7);
   background-position: center;
-  text-align: left;
+  text-align: center;
   padding: 20px;
   margin: 10px;
   border-radius: 40px;
@@ -355,7 +370,6 @@ footer {
   flex-wrap: nowrap;
   justify-content: center;
 }
-
 .footer_redes img {
   width: 40px;
   height: 40px;
@@ -534,11 +548,12 @@ form {
 
 .mapa_titulo {
   grid-area: map_t;
-  margin: 20px 0px;
+  margin: 20px 10px 0px;
   padding: 10px;
   text-align: center;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #3a2d11;
 }
 
 .mapa_nav {
@@ -547,6 +562,7 @@ form {
   font-size: 1.7rem;
   background-color: #2a4a8f;
   border-radius: 25px;
+  margin: 10px 10px;
 }
 
 .mapa_nav ul {
@@ -569,27 +585,27 @@ form {
   grid-area: map_c;
   display: grid;
   grid-template-columns: 1fr;
-  margin: 40px;
+  margin: 10px;
 }
 
 .mapa_producto {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   border-radius: 25px;
 }
 
 .mapa_img img {
-  max-width: 300px;
+  max-width: 225px;
   padding: 10px;
   margin: 10px;
 }
 
 .mapa_desc {
-  max-width: 300px;
+  max-width: 225px;
   font-size: 2rem;
   text-align: center;
 }
@@ -603,6 +619,11 @@ form {
   }
 }
 @media (max-width: 1199px) and (min-width: 768px) {
+  .card img {
+    max-width: 400px;
+    width: 400px;
+    height: 350px;
+  }
   .mapa_catalogo {
     margin: 0px;
   }
@@ -658,16 +679,16 @@ form {
   .producto {
     padding: 30px;
   }
-  .producto_img img {
+  .mapa_img img {
     max-width: 300px;
     max-height: 400px;
   }
-  .producto_desc {
+  .mapa_desc {
     font-size: medium;
   }
   .nosotros_texto {
     font-size: 2rem;
-    margin: 10px 50% 10px 10px;
+    margin: 1% 15%;
   }
   footer {
     flex-direction: row;
@@ -699,7 +720,7 @@ form {
   }
   .mapa_nav {
     margin: 10px;
-    padding: 10px;
+    padding: 10%;
   }
   .grid_consulta {
     grid-template-areas: "form ubic" "form ubic";
@@ -755,6 +776,8 @@ form {
   }
   .card img {
     max-width: 400px;
+    width: 400px;
+    height: 400px;
   }
   .grids_producto {
     display: grid;
@@ -773,7 +796,7 @@ form {
   }
   .nosotros_texto {
     font-size: 2rem;
-    margin: 10px 50% 10px 10px;
+    margin: 1% 15%;
   }
   footer {
     flex-direction: row;
@@ -800,7 +823,7 @@ form {
   .mapa_grid {
     display: grid;
     grid-template-areas: "map_t map_t map_t map_t" "mapa_nav map_c map_c map_c" "mapa_nav map_c map_c map_c";
-    grid-template-columns: auto 27% 27% 27%;
+    grid-template-columns: 20% 25% 25% 25%;
     grid-template-rows: 100px 1fr 1fr;
     align-items: start;
     justify-content: center;
@@ -811,10 +834,26 @@ form {
     margin: 0px;
   }
   .mapa_nav {
-    margin: 20px 10px;
+    padding: 20%;
   }
   .grid_consulta {
     grid-template-areas: "form ubic" "form ubic";
     grid-template-columns: 35% 55%;
   }
+}
+.envolturaTest {
+  display: grid;
+  grid-template-areas: "navTest" "parallaxTienda" "catalogoTest" "footer";
+}
+
+.nav_test {
+  grid-area: navTest;
+}
+
+.catalogo_grid {
+  grid-area: catalogoTest;
+}
+
+.titulo_test {
+  margin: 10px;
 }/*# sourceMappingURL=styles.css.map */
